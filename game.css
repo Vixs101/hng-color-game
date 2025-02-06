@@ -1,0 +1,128 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color:rgb(25, 107, 25);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background-color: #2a2a2a;
+  border: 1px solid #00ff00;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ff00;
+  text-shadow: 2px 2px #000;
+}
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  margin: 1rem auto;
+  border: 1px solid #fff;
+
+  border-radius:20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.color-option {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+.game-status {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  min-height: 1.5em;
+}
+
+.new-game-btn {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-game-btn:hover {
+  background-color: #00cc00;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.celebrate {
+  animation: celebrate 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .color-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .color-option {
+    width: 60px;
+    height: 60px;
+  }
+}

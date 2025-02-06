@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="game.css" />
+    <title>Guess the Color</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Color Guessing Game</h1>
+      <p data-testid="gameInstructions">Guess the correct color!</p>
+      <div
+        data-testid="colorBox"
+        class="color-box"
+        title="click on the buttons below to guess my color"
+      ></div>
+      <div class="color-options">
+        <button data-testid="colorOption" class="color-option"></button>
+        <button data-testid="colorOption" class="color-option"></button>
+        <button data-testid="colorOption" class="color-option"></button>
+        <button data-testid="colorOption" class="color-option"></button>
+        <button data-testid="colorOption" class="color-option"></button>
+        <button data-testid="colorOption" class="color-option"></button>
+      </div>
+      <p data-testid="gameStatus" class="game-status"></p>
+      <p>Score: <span data-testid="score">0</span></p>
+      <button data-testid="newGameButton" class="new-game-btn">New Game</button>
+    </div>
+    <audio
+      id="correctSound"
+      src="https://assets.mixkit.co/sfx/preview/mixkit-melodic-bonus-collect-1938.mp3"
+    ></audio>
+    <audio
+      id="wrongSound"
+      src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"
+    ></audio>
+    <script src="game.js"></script>
+  </body>
+</html>
